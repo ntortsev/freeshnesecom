@@ -1,0 +1,23 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  background: #F9F9F9;
+  padding: 16px 45px;
+
+  p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #151515;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+        border: 1px solid #151515;
+        padding: 10px;
+        border-radius: 5px;
+    }
+  }
+}

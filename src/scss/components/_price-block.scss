@@ -1,0 +1,106 @@
+.price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #151515;
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    p {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: #a9a9a9;
+      position: absolute;
+      right: 53%;
+      bottom: 20%;
+    }
+
+    .price-block__min .price-block__max {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      color: #151515;
+    }
+
+    .price-block__input {
+      padding: 10px 20px;
+      background: #f9f9f9;
+      border: 1px solid #d1d1d1;
+      border-radius: 12px;
+      height: 42px;
+      width: 110px;
+      outline: none;
+    }
+  }
+
+  &__btn {
+    margin-top: 15px;
+    display: flex;
+    gap: 34px;
+    align-items: center;
+    
+    &--green {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+      color: #ffffff;
+      width: 78px;
+      height: 48px;
+      left: 0px;
+      bottom: 0px;
+      background: #6a983c;
+      border: 2px solid #46760a;
+      border-radius: 12px;
+      transition: 0.15s ease-in-out;
+
+      &:hover {
+        background: #74ac3d;
+      }
+    }
+
+    &--inherit {
+      width: 78px;
+      height: 48px;
+      left: 112px;
+      bottom: 6px;
+      background: #ffffff;
+      border-radius: 12px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+      color: #a9a9a9;
+      border: none;
+      transition: 0.15s ease-in-out;
+
+      &:hover {
+        border: 1px solid #a9a9a9;
+      }
+    }
+  }
+}

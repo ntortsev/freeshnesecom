@@ -1,0 +1,50 @@
+.footer {
+    padding-bottom: 64px;
+  &-top {
+    padding: 64px 45px;
+    display: flex;
+    justify-content: space-between;
+    .blog {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      h1 {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        li {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          color: #6a983c;
+          cursor: pointer;
+
+          &:hover {
+            color: #78ce23;
+          }
+        }
+      }
+    }
+  }
+
+  span {
+    padding-left: 45px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #151515;
+  }
+}

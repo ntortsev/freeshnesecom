@@ -1,0 +1,72 @@
+.category-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 64px 45px;
+
+  &__btn {
+    padding: 13px 16px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    border: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #151515;
+    transition: 0.15s ease-in-out;
+    border: 1px solid #f5f5f5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      border: 1px solid #dedddd;
+
+      gap: 18px;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    h1 {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      color: #151515;
+    }
+
+    p {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      text-decoration-line: underline;
+      color: #6a983c;
+      cursor: pointer;
+
+      &:hover {
+        color: #78ce23;
+      }
+    }
+  }
+
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}

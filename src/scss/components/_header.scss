@@ -1,0 +1,111 @@
+.header {
+  width: 100%;
+  padding: 10px 45px 0 45px;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__contact {
+      display: flex;
+      gap: 33px;
+
+      p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #151515;
+      }
+    }
+
+    &__links {
+      display: flex;
+      gap: 38px;
+    }
+
+    span {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #6a983c;
+      cursor: pointer;
+    }
+  }
+
+  &-bottom {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      cursor: pointer;
+    }
+
+    &__search {
+      padding: 10px 16px;
+      background: #f9f9f9;
+      border: 1px solid #d1d1d1;
+      border-radius: 12px;
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        display: flex;
+        align-items: center;
+        select {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 22px;
+          color: #151515;
+          margin-right: 24px;
+          border: none;
+          background: inherit;
+          outline: none;
+          cursor: pointer;
+
+        }
+
+        input {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          color: #a9a9a9;
+          padding: 0 24px;
+          border: none;
+          border-left: 1px solid #d1d1d1;
+          min-width: 75%;
+          background: inherit;
+          outline: none;
+
+        }
+      }
+
+      button {
+        border: none;
+        background: inherit;
+      }
+    }
+
+    &__auth {
+      display: flex;
+      gap: 40px;
+
+      button {
+        border: none;
+        background: inherit;
+      }
+    }
+  }
+}
