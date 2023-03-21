@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/freeshnese/static/css/main.cc1d23f3.css",
+    "main.js": "/freeshnese/static/js/main.d02636e8.js",
+    "static/media/logo.svg": "/freeshnese/static/media/logo.c34895c9b89c2bb41c90bd967cbfdee1.svg",
+    "static/media/cart.svg": "/freeshnese/static/media/cart.1205f41281c1dff65ff7ea0cfb39db3e.svg",
+    "index.html": "/freeshnese/index.html",
+    "static/media/search.svg": "/freeshnese/static/media/search.9b3eaa5182d92f694e8d53cdc9bebee2.svg",
+    "static/media/user.svg": "/freeshnese/static/media/user.bb6a87270e293b79f3ab7622fb6d4ff2.svg",
+    "static/media/arrow.svg": "/freeshnese/static/media/arrow.fe3b242e9b10bb696decd2feb78d42dc.svg",
+    "main.cc1d23f3.css.map": "/freeshnese/static/css/main.cc1d23f3.css.map",
+    "main.d02636e8.js.map": "/freeshnese/static/js/main.d02636e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc1d23f3.css",
+    "static/js/main.d02636e8.js"
+  ]
+}
