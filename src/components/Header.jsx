@@ -21,7 +21,7 @@ function Header({ categories }) {
         </div>
       </div>
       <div className="header-bottom">
-        <Link to="/">
+        <Link to="/freeshnesecom/">
           <img className="header-bottom__logo" src={logo} alt="logo" />
         </Link>
         <form className="header-bottom__search">

@@ -17,7 +17,7 @@ function CategoryMenu({ categories, products }) {
             ))}
           </div>
         </div>
-        <Link to="/products">
+        <Link to="/freeshnesecom/products">
           <button className="category-menu__btn">
             More products <img src={arrow} alt="arrow" />
           </button>

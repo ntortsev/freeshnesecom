@@ -47,13 +47,13 @@ function App() {
       <div className="App">
         <Routes>
           <Route
-            path="/"
+            path="/freeshnesecom/"
             element={
               <Main changeCategory={changeCategory} categories={categories} products={products} />
             }
           />
           <Route
-            path="/products"
+            path="/freeshnesecom/products"
             element={
               <ProductsPage
                 changeRangePrice={changeRangePrice}
