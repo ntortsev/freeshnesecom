@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import Slider from "@mui/material/Slider";
+import React, { useState } from 'react';
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 
 function valuetext(value) {
   return `${value}°C`;
 }
 function PriceBlock({ changeRangePrice }) {
   const [value, setValue] = React.useState([20, 37]);
-  const [inputMin, setInputMin] = useState("");
-  const [inputMax, setInputMax] = useState("");
+  const [inputMin, setInputMin] = useState('');
+  const [inputMax, setInputMax] = useState('');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -24,8 +24,8 @@ function PriceBlock({ changeRangePrice }) {
       <h1>Price</h1>
       <Box sx={{ width: 250 }}>
         <Slider
-          sx={{ color: "#6A983C" }}
-          getAriaLabel={() => "Temperature range"}
+          sx={{ color: '#6A983C' }}
+          getAriaLabel={() => 'Temperature range'}
           value={value}
           onChange={handleChange}
           valueLabelDisplay="auto"

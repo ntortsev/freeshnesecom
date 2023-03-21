@@ -1,46 +1,42 @@
-import "./scss/app.scss";
-import Main from "./pages/Main.jsx";
-import ProductsPage from "./pages/ProductsPage.jsx";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Route, Routes } from "react-router-dom";
+import './scss/app.scss';
+import Main from './pages/Main.jsx';
+import ProductsPage from './pages/ProductsPage.jsx';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   useEffect(() => {
-    axios
-      .get("https://api.escuelajs.co/api/v1/categories")
-      .then((res) => setCategories(res.data));
+    axios.get('https://dummyjson.com/products/categories').then((res) => setCategories(res.data));
 
-    axios
-      .get("https://api.escuelajs.co/api/v1/products")
-      .then((res) => setProducts(res.data));
+    axios.get('https://dummyjson.com/products').then((res) => setProducts(res.data.products));
+
+    fetch('https://dummyjson.com/products?limit=10&select=price')
+      .then((res) => res.json())
+      .then(console.log);
   }, []);
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
 
   //filter categories
-  const [selectCategory, setSelectCategory] = useState({ id: 1 });
+  const [selectCategory, setSelectCategory] = useState('');
   const [rangePrice, setRangePrice] = useState({ min: 0, max: 500 });
 
   useEffect(() => {
     axios
-      .get(
-        `https://api.escuelajs.co/api/v1/products/?categoryId=${selectCategory.id}`
-      )
-      .then((res) => setProducts(res.data));
+      .get(`https://dummyjson.com/products/category/${selectCategory ? selectCategory : null}`)
+      .then((res) => setProducts(res.data.products));
   }, [selectCategory]);
 
   useEffect(() => {
     axios
-      .get(
-        `https://api.escuelajs.co/api/v1/products/?price_min=${rangePrice.min}&price_max=${rangePrice.max}`
-      )
-      .then((res) => setProducts(res.data));
+      .get(`https://dummyjson.com/products?price=${rangePrice.min}`)
+      .then((res) => setProducts(res.data.products));
   }, [rangePrice]);
 
   //function filter
   const changeCategory = (category) => {
-    setSelectCategory(category);
+    setSelectCategory(String(category));
   };
 
   const changeRangePrice = (obj) => {
@@ -53,11 +49,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Main
-                changeCategory={changeCategory}
-                categories={categories}
-                products={products}
-              />
+              <Main changeCategory={changeCategory} categories={categories} products={products} />
             }
           />
           <Route

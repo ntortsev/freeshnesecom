@@ -10,9 +10,9 @@ function CategoryMenu({ categories, products }) {
         <div>
           <h1>Best selling products</h1>
           <div>
-            {categories.map((c) => (
-              <p key={c.id}>
-                {c.name.charAt(0).toUpperCase() + c.name.slice(1)}
+            {categories.map((c, i) => (
+              <p key={i}>
+                {c}
               </p>
             ))}
           </div>
@@ -24,8 +24,8 @@ function CategoryMenu({ categories, products }) {
         </Link>
       </div>
       <div className="category-menu__products">
-        {products.slice(0, 3).map((product) => (
-          <ProductCard key={product.id} obj={product} />
+        {products.slice(0, 3).map((product, index) => (
+          <ProductCard key={index} obj={product} />
         ))}
       </div>
     </div>

@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 16px;
 
+
   h1 {
     font-family: "Poppins";
     font-style: normal;
@@ -26,11 +27,16 @@
       line-height: 19px;
       color: #a9a9a9;
       position: absolute;
-      right: 53%;
+      right: 49%;
       bottom: 20%;
     }
 
-    .price-block__min .price-block__max {
+    .price-block__min  {
+      display: flex;
+      flex-direction: column;
+    }
+
+		.price-block__max  {
       display: flex;
       flex-direction: column;
     }

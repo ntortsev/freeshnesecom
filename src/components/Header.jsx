@@ -28,9 +28,9 @@ function Header({ categories }) {
           <div>
             <select>
               <option>All Categories</option>
-              {categories?.map((c) => (
-                <option key={c.id}>
-                  {c.name.charAt(0).toUpperCase() + c.name.slice(1)}
+              {categories?.map((c, i) => (
+                <option key={i}>
+                  {c}
                 </option>
               ))}
             </select>
