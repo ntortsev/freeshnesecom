@@ -1,7 +1,7 @@
 {
   "name": "practice",
   "version": "0.1.0",
-  "homepage": "https://ntortsev.github.io/freeshnesecom",
+  "homepage": "https://ntortsev.github.io/freeshnesecom/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",

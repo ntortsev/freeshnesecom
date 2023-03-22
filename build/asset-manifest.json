@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ntortsev/freeshnesecom/static/css/main.40ec1142.css",
-    "main.js": "/ntortsev/freeshnesecom/static/js/main.cb6eb278.js",
-    "static/media/rating-1.svg": "/ntortsev/freeshnesecom/static/media/rating-1.b0b03acdc8bb9f6ee61c376511fc78a8.svg",
-    "static/media/rating-2.svg": "/ntortsev/freeshnesecom/static/media/rating-2.a9d2bbf6388b9d1ab9b28578571bdc73.svg",
-    "static/media/rating-3.svg": "/ntortsev/freeshnesecom/static/media/rating-3.f06bffdfe879e3c2664fef0d0459eb15.svg",
-    "static/media/rating-4.svg": "/ntortsev/freeshnesecom/static/media/rating-4.7c286bcfaba1ff9bf037ea81313c7c42.svg",
-    "static/media/rating-5.svg": "/ntortsev/freeshnesecom/static/media/rating-5.88f497649ff84c657480a0eb44e9ce8b.svg",
-    "static/media/logo.svg": "/ntortsev/freeshnesecom/static/media/logo.c34895c9b89c2bb41c90bd967cbfdee1.svg",
-    "static/media/cart.svg": "/ntortsev/freeshnesecom/static/media/cart.1205f41281c1dff65ff7ea0cfb39db3e.svg",
-    "index.html": "/ntortsev/freeshnesecom/index.html",
-    "static/media/search.svg": "/ntortsev/freeshnesecom/static/media/search.9b3eaa5182d92f694e8d53cdc9bebee2.svg",
-    "static/media/user.svg": "/ntortsev/freeshnesecom/static/media/user.bb6a87270e293b79f3ab7622fb6d4ff2.svg",
-    "static/media/arrow.svg": "/ntortsev/freeshnesecom/static/media/arrow.fe3b242e9b10bb696decd2feb78d42dc.svg",
-    "main.40ec1142.css.map": "/ntortsev/freeshnesecom/static/css/main.40ec1142.css.map",
-    "main.cb6eb278.js.map": "/ntortsev/freeshnesecom/static/js/main.cb6eb278.js.map"
+    "main.css": "/freeshnesecom/static/css/main.40ec1142.css",
+    "main.js": "/freeshnesecom/static/js/main.3995d692.js",
+    "static/media/rating-1.svg": "/freeshnesecom/static/media/rating-1.b0b03acdc8bb9f6ee61c376511fc78a8.svg",
+    "static/media/rating-2.svg": "/freeshnesecom/static/media/rating-2.a9d2bbf6388b9d1ab9b28578571bdc73.svg",
+    "static/media/rating-3.svg": "/freeshnesecom/static/media/rating-3.f06bffdfe879e3c2664fef0d0459eb15.svg",
+    "static/media/rating-4.svg": "/freeshnesecom/static/media/rating-4.7c286bcfaba1ff9bf037ea81313c7c42.svg",
+    "static/media/rating-5.svg": "/freeshnesecom/static/media/rating-5.88f497649ff84c657480a0eb44e9ce8b.svg",
+    "static/media/logo.svg": "/freeshnesecom/static/media/logo.c34895c9b89c2bb41c90bd967cbfdee1.svg",
+    "static/media/cart.svg": "/freeshnesecom/static/media/cart.1205f41281c1dff65ff7ea0cfb39db3e.svg",
+    "index.html": "/freeshnesecom/index.html",
+    "static/media/search.svg": "/freeshnesecom/static/media/search.9b3eaa5182d92f694e8d53cdc9bebee2.svg",
+    "static/media/user.svg": "/freeshnesecom/static/media/user.bb6a87270e293b79f3ab7622fb6d4ff2.svg",
+    "static/media/arrow.svg": "/freeshnesecom/static/media/arrow.fe3b242e9b10bb696decd2feb78d42dc.svg",
+    "main.40ec1142.css.map": "/freeshnesecom/static/css/main.40ec1142.css.map",
+    "main.3995d692.js.map": "/freeshnesecom/static/js/main.3995d692.js.map"
   },
   "entrypoints": [
     "static/css/main.40ec1142.css",
-    "static/js/main.cb6eb278.js"
+    "static/js/main.3995d692.js"
   ]
 }
