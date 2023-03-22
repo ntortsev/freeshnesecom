@@ -40,5 +40,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "https://ntortsev.github.io/freeshnesecom/\r https://dummyjson.com/docs/products\r https://www.figma.com/file/MYSH8NOMRhGHep8QafFFmI/Figma---eCommerce-template-(Copy)?node-id=23-1061&t=SwXS4K67l35JtNLy-0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntortsev/freeshnesecom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntortsev/freeshnesecom/issues"
+  },
+  "homepage": "https://github.com/ntortsev/freeshnesecom#readme"
 }

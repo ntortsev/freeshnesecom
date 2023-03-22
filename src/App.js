@@ -1,9 +1,9 @@
-import "./scss/app.scss";
-import Main from "./pages/Main.jsx";
-import ProductsPage from "./pages/ProductsPage.jsx";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Route, Routes } from "react-router-dom";
+import './scss/app.scss';
+import Main from './pages/Main.jsx';
+import ProductsPage from './pages/ProductsPage.jsx';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   const [categories, setCategories] = useState([]);
@@ -11,16 +11,14 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://dummyjson.com/products/categories")
+      .get('https://dummyjson.com/products/categories')
       .then((res) => setCategories(res.data.slice(0, 8)));
 
-    axios
-      .get("https://dummyjson.com/products")
-      .then((res) => setProducts(res.data.products));
+    axios.get('https://dummyjson.com/products').then((res) => setProducts(res.data.products));
   }, []);
 
   //filter categories
-  const [selectCategory, setSelectCategory] = useState("all");
+  const [selectCategory, setSelectCategory] = useState('all');
   const [rangePrice, setRangePrice] = useState({ min: 0, max: 500 });
 
   //change category
@@ -28,29 +26,23 @@ function App() {
     axios
       .get(
         `https://dummyjson.com/products/${
-          selectCategory === "all" ? "" : `category/${selectCategory}`
-        }`
+          selectCategory === 'all' ? '' : `category/${selectCategory}`
+        }`,
       )
       .then((res) => setProducts(res.data.products));
   }, [selectCategory]);
 
   //change price
   useEffect(() => {
-    axios
-      .get(
-        `https://dummyjson.com/products${
-          selectCategory === "all" ? "" : `category/${selectCategory}`
-        }`
-      )
-      .then((res) => {
-        setProducts(
-          res.data.products.filter(
-            (product) =>
-              Number(product.price) >= rangePrice.min &&
-              Number(product.price) <= rangePrice.max
-          )
-        );
-      });
+    const filtredProductsByPrice = products.filter(
+      (product) =>
+        Number(product.price) >= rangePrice.min && Number(product.price) <= rangePrice.max,
+    );
+    if (filtredProductsByPrice.length) {
+      setProducts(filtredProductsByPrice);
+    } else {
+      alert('Такой цены нет');
+    }
   }, [rangePrice]);
 
   //function filter
@@ -68,11 +60,7 @@ function App() {
           <Route
             path="/freeshnesecom/"
             element={
-              <Main
-                changeCategory={changeCategory}
-                categories={categories}
-                products={products}
-              />
+              <Main changeCategory={changeCategory} categories={categories} products={products} />
             }
           />
           <Route
