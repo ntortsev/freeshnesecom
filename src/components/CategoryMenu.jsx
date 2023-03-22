@@ -3,7 +3,7 @@ import { ProductCard } from "./index.js";
 import arrow from "../assets/arrow.svg";
 import { Link } from "react-router-dom";
 
-function CategoryMenu({ categories, products }) {
+function CategoryMenu({ categories, products, changeCategory }) {
   return (
     <div className="category-menu">
       <div className="category-menu__categories">
@@ -11,8 +11,8 @@ function CategoryMenu({ categories, products }) {
           <h1>Best selling products</h1>
           <div>
             {categories.map((c, i) => (
-              <p key={i}>
-                {c}
+              <p onClick={() => changeCategory(c)} key={i}>
+                {c.charAt(0).toUpperCase() + c.slice(1)}
               </p>
             ))}
           </div>

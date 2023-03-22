@@ -5,4 +5,4 @@ export { default as ProductCard } from "./ProductCard.jsx";
 export { default as Footer } from "./Footer.jsx";
 export { default as Categories } from "./Categories.jsx";
 export { default as PriceBlock } from "./PriceBlock.jsx";
-
+export { default as Rating } from "./Rating.jsx";

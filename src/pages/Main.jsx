@@ -6,7 +6,7 @@ function Main({categories, products, changeCategory}) {
     <div className="main-page">
       <Header categories={categories} />
       <Menu categories={categories} changeCategory={changeCategory} />
-      <CategoryMenu categories={categories} products={products} />
+      <CategoryMenu changeCategory={changeCategory} categories={categories} products={products} />
       <Footer />
     </div>
   )

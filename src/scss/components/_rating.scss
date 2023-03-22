@@ -1,0 +1,33 @@
+.rating {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #151515;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+
+    li {
+      display: flex;
+      gap: 8px;
+
+      input {
+        width: 24px;
+        height: 24px;
+        outline: none;
+        cursor: pointer;
+        border: 1px solid #d1d1d1;
+      }
+    }
+  }
+}
