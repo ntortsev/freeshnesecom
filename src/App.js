@@ -1,24 +1,41 @@
-import './scss/app.scss';
-import Main from './pages/Main.jsx';
-import ProductsPage from './pages/ProductsPage.jsx';
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Route, Routes } from 'react-router-dom';
+import "./scss/app.scss";
+import Main from "./pages/Main.jsx";
+import ProductsPage from "./pages/ProductsPage.jsx";
+import ItemPage from "./pages/ItemPage";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
+  //item page
+  const [selectItem, setSelectItem] = useState();
+
+  useEffect(() => {
+    localStorage.setItem(
+      "item-block",
+      JSON.stringify(products.find((p) => p === selectItem))
+    );
+  }, [selectItem]);
+
+  const changeSelectItem = (obj) => {
+    setSelectItem(obj);
+  };
+
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     axios
-      .get('https://dummyjson.com/products/categories')
+      .get("https://dummyjson.com/products/categories")
       .then((res) => setCategories(res.data.slice(0, 8)));
 
-    axios.get('https://dummyjson.com/products').then((res) => setProducts(res.data.products));
+    axios
+      .get("https://dummyjson.com/products?limit=10&skip=10")
+      .then((res) => setProducts(res.data.products));
   }, []);
 
   //filter categories
-  const [selectCategory, setSelectCategory] = useState('all');
+  const [selectCategory, setSelectCategory] = useState("all");
   const [rangePrice, setRangePrice] = useState({ min: 0, max: 500 });
 
   //change category
@@ -26,8 +43,8 @@ function App() {
     axios
       .get(
         `https://dummyjson.com/products/${
-          selectCategory === 'all' ? '' : `category/${selectCategory}`
-        }`,
+          selectCategory === "all" ? "" : `category/${selectCategory}`
+        }`
       )
       .then((res) => setProducts(res.data.products));
   }, [selectCategory]);
@@ -36,12 +53,13 @@ function App() {
   useEffect(() => {
     const filtredProductsByPrice = products.filter(
       (product) =>
-        Number(product.price) >= rangePrice.min && Number(product.price) <= rangePrice.max,
+        Number(product.price) >= rangePrice.min &&
+        Number(product.price) <= rangePrice.max
     );
     if (filtredProductsByPrice.length) {
       setProducts(filtredProductsByPrice);
     } else {
-      alert('Такой цены нет');
+      console.log("Такой цены нет");
     }
   }, [rangePrice]);
 
@@ -60,18 +78,34 @@ function App() {
           <Route
             path="/freeshnesecom/"
             element={
-              <Main changeCategory={changeCategory} categories={categories} products={products} />
+              <Main
+                changeCategory={changeCategory}
+                categories={categories}
+                products={products}
+                changeSelectItem={changeSelectItem}
+              />
             }
           />
           <Route
             path="/freeshnesecom/products"
             element={
               <ProductsPage
-                selectCategory={selectCategory}
                 changeRangePrice={changeRangePrice}
                 changeCategory={changeCategory}
                 categories={categories}
                 products={products}
+              />
+            }
+          />
+          <Route
+            path="/freeshnesecom/products/item/"
+            element={
+              <ItemPage
+                changeCategory={changeCategory}
+                categories={categories}
+                products={products}
+                selectItem={selectItem}
+                changeSelectItem={changeSelectItem}
               />
             }
           />

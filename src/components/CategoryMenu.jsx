@@ -3,7 +3,12 @@ import { ProductCard } from "./index.js";
 import arrow from "../assets/arrow.svg";
 import { Link } from "react-router-dom";
 
-function CategoryMenu({ categories, products, changeCategory }) {
+function CategoryMenu({
+  categories,
+  products,
+  changeCategory,
+  changeSelectItem,
+}) {
   return (
     <div className="category-menu">
       <div className="category-menu__categories">
@@ -25,7 +30,13 @@ function CategoryMenu({ categories, products, changeCategory }) {
       </div>
       <div className="category-menu__products">
         {products.slice(0, 3).map((product, index) => (
-          <ProductCard key={index} obj={product} />
+          <Link
+            onClick={() => changeSelectItem(product)}
+            key={index}
+            to="/freeshnesecom/products/item/"
+          >
+            <ProductCard obj={product} />
+          </Link>
         ))}
       </div>
     </div>

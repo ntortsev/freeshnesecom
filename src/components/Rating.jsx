@@ -36,7 +36,7 @@ function Rating() {
         {arrRating.map((obj) => (
           <li key={obj.rating}>
             <input type="checkbox" />
-            <img src={obj.img} alt="rating-image" />
+            <img src={obj.img} alt="rating" />
           </li>
         ))}
       </ul>
