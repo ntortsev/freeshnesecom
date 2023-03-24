@@ -1,22 +1,63 @@
 .product-page {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 45px;
+    .product-page__category {
+      
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 48px;
+      color: #151515;
 
-    &__filters {
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .product-page__view {
+      display: flex;
+      gap: 24px;
+
+      div {
         display: flex;
-        flex-direction: column;
-        gap: 48px;
-    }
+        align-items: center;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #a9a9a9;
+        gap: 4px;
+        cursor: pointer;
 
-    &__content {
-        padding: 64px 45px;
-        display: flex;
-        gap: 35px;
-        justify-content: space-between;
-				align-items:flex-start;
+        &:hover {
+            color: #6d6d6d;
+        }
+      }
     }
+  }
 
-    &__products {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-    }
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__content {
+    padding: 64px 45px;
+    display: flex;
+    gap: 35px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+//   &__products {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 32px;
+//   }
 }

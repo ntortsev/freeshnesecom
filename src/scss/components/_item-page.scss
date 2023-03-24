@@ -114,6 +114,9 @@
     }
     .item-page__favorite {
       display: flex;
+      justify-content: space-between;
+      div {
+        display: flex;
       align-items: center;
       gap: 6px;
       font-family: "Poppins";
@@ -123,6 +126,8 @@
       line-height: 22px;
       color: #151515;
       cursor: pointer;
+      }
+      
     }
   }
 }

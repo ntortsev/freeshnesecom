@@ -8,14 +8,8 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   //item page
-  const [selectItem, setSelectItem] = useState();
+  const [selectItem, setSelectItem] = useState('');
 
-  useEffect(() => {
-    localStorage.setItem(
-      "item-block",
-      JSON.stringify(products.find((p) => p === selectItem))
-    );
-  }, [selectItem]);
 
   const changeSelectItem = (obj) => {
     setSelectItem(obj);
@@ -27,10 +21,10 @@ function App() {
   useEffect(() => {
     axios
       .get("https://dummyjson.com/products/categories")
-      .then((res) => setCategories(res.data.slice(0, 8)));
+      .then((res) => setCategories(res.data.slice(0, 6)));
 
     axios
-      .get("https://dummyjson.com/products?limit=10&skip=10")
+      .get("https://dummyjson.com/products")
       .then((res) => setProducts(res.data.products));
   }, []);
 
@@ -90,15 +84,17 @@ function App() {
             path="/freeshnesecom/products"
             element={
               <ProductsPage
+              selectCategory={selectCategory}
                 changeRangePrice={changeRangePrice}
                 changeCategory={changeCategory}
                 categories={categories}
                 products={products}
+                changeSelectItem={changeSelectItem}
               />
             }
           />
           <Route
-            path="/freeshnesecom/products/item/"
+            path={`/freeshnesecom/products/item/:id`}
             element={
               <ItemPage
                 changeCategory={changeCategory}
@@ -106,6 +102,8 @@ function App() {
                 products={products}
                 selectItem={selectItem}
                 changeSelectItem={changeSelectItem}
+                setSelectItem={setSelectItem}
+                setProducts={setProducts}
               />
             }
           />

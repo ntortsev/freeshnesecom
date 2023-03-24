@@ -33,7 +33,7 @@ function CategoryMenu({
           <Link
             onClick={() => changeSelectItem(product)}
             key={index}
-            to="/freeshnesecom/products/item/"
+            to={'/freeshnesecom/products/item/' + product.id}
           >
             <ProductCard obj={product} />
           </Link>
