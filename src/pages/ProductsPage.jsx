@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   Header,
   Footer,
@@ -18,9 +18,10 @@ function ProductsPage({
   changeRangePrice,
   changeSelectItem,
   selectCategory,
+  search,
+  filteredProduct,
+  searchProducts,
 }) {
-  
-
   const styleList = {
     display: "flex",
     flexDirection: "column",
@@ -33,10 +34,10 @@ function ProductsPage({
   };
 
   const [style, setStyle] = useState(styleGrid);
-  console.log(style)
+  console.log(filteredProduct);
   return (
     <div className="product-page">
-      <Header categories={categories} />
+      <Header search={search} categories={categories} />
       <Menu changeCategory={changeCategory} categories={categories} />
       <div className="product-page__header">
         <h1 className="product-page__category">{selectCategory}</h1>
@@ -58,15 +59,25 @@ function ProductsPage({
           <PriceBlock changeRangePrice={changeRangePrice} />
         </div>
         <div className="product-page__products" style={style}>
-          {products?.map((product, index) => (
-            <Link
-              onClick={() => changeSelectItem(product)}
-              key={index}
-              to={"/freeshnesecom/products/item/" + product.id}
-            >
-              <ProductCard style={style} obj={product} />
-            </Link>
-          ))}
+          {searchProducts?.length
+            ? searchProducts?.map((product, index) => (
+                <Link
+                  onClick={() => changeSelectItem(product)}
+                  key={index}
+                  to={"/freeshnesecom/products/item/" + product.id}
+                >
+                  <ProductCard style={style} obj={product} />
+                </Link>
+              ))
+            : products?.map((product, index) => (
+                <Link
+                  onClick={() => changeSelectItem(product)}
+                  key={index}
+                  to={"/freeshnesecom/products/item/" + product.id}
+                >
+                  <ProductCard style={style} obj={product} />
+                </Link>
+              ))}
         </div>
       </div>
 

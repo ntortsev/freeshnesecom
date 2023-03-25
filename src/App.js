@@ -8,8 +8,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   //item page
-  const [selectItem, setSelectItem] = useState('');
-
+  const [selectItem, setSelectItem] = useState("");
 
   const changeSelectItem = (obj) => {
     setSelectItem(obj);
@@ -65,6 +64,17 @@ function App() {
   const changeRangePrice = (obj) => {
     setRangePrice({ min: obj.min, max: obj.max });
   };
+
+  //search
+  const [searchProducts, setSearchProducts] = useState([]);
+  let filteredProduct;
+  const search = (value) => {
+    filteredProduct = products.filter((p) =>
+      p.title.toLowerCase().includes(value.toLowerCase())
+    );
+    setSearchProducts(filteredProduct);
+  };
+
   return (
     <div className="container">
       <div className="App">
@@ -84,7 +94,10 @@ function App() {
             path="/freeshnesecom/products"
             element={
               <ProductsPage
-              selectCategory={selectCategory}
+                searchProducts={searchProducts}
+                filteredProduct={filteredProduct}
+                search={search}
+                selectCategory={selectCategory}
                 changeRangePrice={changeRangePrice}
                 changeCategory={changeCategory}
                 categories={categories}

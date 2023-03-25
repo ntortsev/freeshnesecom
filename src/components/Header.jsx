@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
-import search from "../assets/search.svg";
+import searchSvg from "../assets/search.svg";
 import user from "../assets/user.svg";
 import cart from "../assets/cart.svg";
 import { Link } from "react-router-dom";
 
-function Header({ categories }) {
+function Header({ categories, search }) {
+  const [inputSearch, setInputSearch] = useState("");
+  const searchFormHandle = (e) => {
+    e.preventDefault();
+    search(inputSearch);
+    setInputSearch("");
+  };
+
   return (
     <div className="header">
       <div className="header-top">
@@ -24,20 +31,23 @@ function Header({ categories }) {
         <Link to="/freeshnesecom/">
           <img className="header-bottom__logo" src={logo} alt="logo" />
         </Link>
-        <form className="header-bottom__search">
+        <form onSubmit={searchFormHandle} className="header-bottom__search">
           <div>
             <select>
               <option>All Categories</option>
               {categories?.map((c, i) => (
-                <option key={i}>
-                  {c}
-                </option>
+                <option key={i}>{c}</option>
               ))}
             </select>
-            <input type="text" placeholder="Search Products, categories ..." />
+            <input
+              value={inputSearch}
+              onChange={(e) => setInputSearch(e.target.value)}
+              type="text"
+              placeholder="Search Products, categories ..."
+            />
           </div>
           <button type="submit">
-            <img src={search} alt="search" />
+            <img src={searchSvg} alt="search-svg" />
           </button>
         </form>
         <div className="header-bottom__auth">

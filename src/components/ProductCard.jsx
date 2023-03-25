@@ -1,7 +1,6 @@
 import React from "react";
 
 function ProductCard({ obj, style }) {
-  console.log(style);
   return (
     <>
       {style?.display === "flex" ? (
