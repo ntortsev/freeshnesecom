@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/freeshnesecom/static/css/main.1ba5cf5c.css",
+    "main.js": "/freeshnesecom/static/js/main.91569122.js",
+    "static/media/rating-1.svg": "/freeshnesecom/static/media/rating-1.b0b03acdc8bb9f6ee61c376511fc78a8.svg",
+    "static/media/rating-2.svg": "/freeshnesecom/static/media/rating-2.a9d2bbf6388b9d1ab9b28578571bdc73.svg",
+    "static/media/rating-3.svg": "/freeshnesecom/static/media/rating-3.f06bffdfe879e3c2664fef0d0459eb15.svg",
+    "static/media/rating-4.svg": "/freeshnesecom/static/media/rating-4.7c286bcfaba1ff9bf037ea81313c7c42.svg",
+    "static/media/rating-5.svg": "/freeshnesecom/static/media/rating-5.88f497649ff84c657480a0eb44e9ce8b.svg",
+    "static/media/logo.svg": "/freeshnesecom/static/media/logo.c34895c9b89c2bb41c90bd967cbfdee1.svg",
+    "static/media/cart.svg": "/freeshnesecom/static/media/cart.1205f41281c1dff65ff7ea0cfb39db3e.svg",
+    "index.html": "/freeshnesecom/index.html",
+    "static/media/heart.svg": "/freeshnesecom/static/media/heart.dacaf0330f4c9d1b7664f69affb03701.svg",
+    "static/media/list.svg": "/freeshnesecom/static/media/list.f46587222b4f34f5f3c8db1157ffee81.svg",
+    "static/media/grid.svg": "/freeshnesecom/static/media/grid.545c648e39bbd0df78fc0f1a787fcccc.svg",
+    "static/media/search.svg": "/freeshnesecom/static/media/search.9b3eaa5182d92f694e8d53cdc9bebee2.svg",
+    "static/media/user.svg": "/freeshnesecom/static/media/user.bb6a87270e293b79f3ab7622fb6d4ff2.svg",
+    "static/media/arrow.svg": "/freeshnesecom/static/media/arrow.fe3b242e9b10bb696decd2feb78d42dc.svg",
+    "main.1ba5cf5c.css.map": "/freeshnesecom/static/css/main.1ba5cf5c.css.map",
+    "main.91569122.js.map": "/freeshnesecom/static/js/main.91569122.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ba5cf5c.css",
+    "static/js/main.91569122.js"
+  ]
+}
