@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Header, Menu, CategoryMenu, Footer } from "../components/index.js";
+import { Header, Menu, Footer } from "../components/index.js";
 import heart from "../assets/heart.svg";
 import { useParams } from "react-router-dom";
 import axios from "axios";
