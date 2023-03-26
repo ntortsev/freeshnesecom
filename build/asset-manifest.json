@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/freeshnesecom/static/css/main.1ba5cf5c.css",
-    "main.js": "/freeshnesecom/static/js/main.91569122.js",
+    "main.js": "/freeshnesecom/static/js/main.0657a680.js",
     "static/media/rating-1.svg": "/freeshnesecom/static/media/rating-1.b0b03acdc8bb9f6ee61c376511fc78a8.svg",
     "static/media/rating-2.svg": "/freeshnesecom/static/media/rating-2.a9d2bbf6388b9d1ab9b28578571bdc73.svg",
     "static/media/rating-3.svg": "/freeshnesecom/static/media/rating-3.f06bffdfe879e3c2664fef0d0459eb15.svg",
@@ -17,10 +17,10 @@
     "static/media/user.svg": "/freeshnesecom/static/media/user.bb6a87270e293b79f3ab7622fb6d4ff2.svg",
     "static/media/arrow.svg": "/freeshnesecom/static/media/arrow.fe3b242e9b10bb696decd2feb78d42dc.svg",
     "main.1ba5cf5c.css.map": "/freeshnesecom/static/css/main.1ba5cf5c.css.map",
-    "main.91569122.js.map": "/freeshnesecom/static/js/main.91569122.js.map"
+    "main.0657a680.js.map": "/freeshnesecom/static/js/main.0657a680.js.map"
   },
   "entrypoints": [
     "static/css/main.1ba5cf5c.css",
-    "static/js/main.91569122.js"
+    "static/js/main.0657a680.js"
   ]
 }

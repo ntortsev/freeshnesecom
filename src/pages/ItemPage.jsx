@@ -21,7 +21,7 @@ function ItemPage({
     axios
       .get("https://dummyjson.com/products")
       .then((res) => setProducts(res.data.products));
-  }, []);
+  });
 
   useEffect(() => {
     const result = products.filter((p) => Number(p.id) === Number(item.id));
